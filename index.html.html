@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyssinia Restaurant - Virtual Assistant</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dx6zxdlts/image/upload/v1753187732/Abysinia-logo1_ojbrue.jpg">
+
+    <!-- Tailwind CSS for layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* This CSS block implements the detailed styling guide provided.
+          It sets the background, fonts, and colors to create a luxurious and on-brand experience.
+        */
+
+        /* Define brand colors and fonts as CSS variables for easy use */
+        :root {
+            --brand-red: #950000;
+            --brand-text: #EAEAEA;
+            --font-body: 'Montserrat', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            /* Set the background image with a semi-transparent black overlay for text readability */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/dx6zxdlts/image/upload/v1753187328/abyssinia_image_1_siqubr.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--brand-text);
+        }
+
+        /* Styling for the main heading (H1) based on the guide */
+        h1 {
+            font-family: var(--font-heading);
+            color: var(--brand-red);
+            font-weight: 700;
+        }
+        
+        /* Styling for paragraphs */
+        p {
+            font-size: 1.125rem; /* Approx 18px */
+            line-height: 1.6;
+        }
+
+        /* Styling for the chat widget container */
+        #VG_OVERLAY_CONTAINER {
+            height: 70vh; /* Vertical height relative to the viewport */
+            max-height: 700px;
+            min-height: 500px;
+            width: 100%;
+            border-radius: 0.75rem; /* 12px */
+            overflow: hidden;
+            /* A subtle glow instead of a hard border to fit the luxurious theme */
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(10, 10, 10, 0.7); /* Dark, semi-transparent background */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main container for centering content -->
+    <div class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+        
+        <!-- Header Section with Logo -->
+        <header class="text-center w-full max-w-4xl mx-auto mb-8">
+            <!-- Restaurant Logo -->
+            <img src="https://res.cloudinary.com/dx6zxdlts/image/upload/v1753187732/Abysinia-logo1_ojbrue.jpg" alt="Abyssinia Restaurant Logo" class="w-24 h-24 mx-auto mb-4 rounded-full object-cover border-2 border-gray-400">
+            
+            <h1 class="text-5xl sm:text-6xl md:text-7xl">
+                Abyssinia Restaurant
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-gray-300">
+                Welcome. Our virtual assistant is here to help you with reservations, menu inquiries, and more.
+            </p>
+        </header>
+
+        <!-- Main Content: Chat Embed -->
+        <main class="w-full max-w-4xl mx-auto">
+            <!-- This div is the target for the CONVOCORE chat widget -->
+            <div id="VG_OVERLAY_CONTAINER">
+                <!-- CONVOCORE renders the widget here -->
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="text-center w-full max-w-4xl mx-auto mt-8">
+            <p class="text-sm text-gray-400">
+                &copy; 2024 Abyssinia Restaurant Nairobi. All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- CONVOCORE Embed Script -->
+    <script>
+      (function() {
+          window.VG_CONFIG = {
+              ID: "7g8bm2y4vu35c4ph",
+              region: 'eu',
+              render: 'full-width',
+              stylesheets: [
+                  "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css",
+              ],
+          }
+          var VG_SCRIPT = document.createElement("script");
+          VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+          VG_SCRIPT.defer = true;
+          document.body.appendChild(VG_SCRIPT);
+      })()
+    </script>
+
+</body>
+</html>
